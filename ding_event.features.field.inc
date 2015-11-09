@@ -218,7 +218,7 @@ function ding_event_field_default_fields() {
       'entity_type' => 'node',
       'field_name' => 'field_address',
       'label' => 'Address',
-      'required' => 0,
+      'required' => 1,
       'settings' => array(
         'user_register_form' => FALSE,
       ),
@@ -855,7 +855,7 @@ function ding_event_field_default_fields() {
       ),
     ),
   );
-  
+
   // Exported field: 'node-ding_event-group_audience'.
   $fields['node-ding_event-group_audience'] = array(
     'field_config' => array(
