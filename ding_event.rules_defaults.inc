@@ -12,9 +12,10 @@ function ding_event_default_rules_configuration() {
   $items['rules_ding_event_comment_update'] = entity_import('rules_config', '{ "rules_ding_event_comment_update" : {
       "LABEL" : "Ding event comment update",
       "PLUGIN" : "reaction rule",
+      "OWNER" : "rules",
       "TAGS" : [ "ding_event" ],
-      "REQUIRES" : [ "rules", "cache_actions", "comment" ],
-      "ON" : [ "comment_delete", "comment_update", "comment_insert" ],
+      "REQUIRES" : [ "cache_actions", "comment" ],
+      "ON" : { "comment_delete" : [], "comment_update" : [], "comment_insert" : [] },
       "IF" : [
         { "node_is_of_type" : {
             "node" : [ "comment:node" ],
@@ -30,9 +31,10 @@ function ding_event_default_rules_configuration() {
   $items['rules_ding_event_node_update'] = entity_import('rules_config', '{ "rules_ding_event_node_update" : {
       "LABEL" : "Ding event node update",
       "PLUGIN" : "reaction rule",
+      "OWNER" : "rules",
       "TAGS" : [ "ding_event" ],
-      "REQUIRES" : [ "rules", "cache_actions" ],
-      "ON" : [ "node_insert", "node_update", "node_delete" ],
+      "REQUIRES" : [ "cache_actions", "rules" ],
+      "ON" : { "node_insert" : [], "node_update" : [], "node_delete" : [] },
       "IF" : [
         { "node_is_of_type" : {
             "node" : [ "node" ],
