@@ -853,6 +853,7 @@ function ding_event_views_default_views() {
     t('Genre'),
     t('Material type'),
     t('Tags'),
+    t('Short info without library'),
     t('Short event info without library'),
   );
   $export['ding_event'] = $view;

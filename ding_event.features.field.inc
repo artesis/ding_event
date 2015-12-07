@@ -855,7 +855,7 @@ function ding_event_field_default_fields() {
       ),
     ),
   );
-  
+
   // Exported field: 'node-ding_event-group_audience'.
   $fields['node-ding_event-group_audience'] = array(
     'field_config' => array(
